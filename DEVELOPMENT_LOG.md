@@ -59,16 +59,17 @@ Time taken: 1 hour
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**: 
+### Entry 3 March 22, 2026, 7:00 PM
 
-**Details**: 
+What I did: Added the second feature, Context Switch Counter.
 
-**Challenges**: 
+Details: Defined a static variable, contextSwitchCount, to count the number of times the processor switches between processes.
 
-**Solution**: 
+Challenges: Counting the first process as a context switch.
 
-**Time spent**: 
+Solution: Incremented the counter each time a while loop starts to pull a new process from the queue.
+
+Time taken: 1 hour
 
 ---
 
