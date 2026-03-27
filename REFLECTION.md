@@ -32,8 +32,7 @@ I overcame these challenges by starting by reviewing the course material to gain
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
 **Your Answer:**
-
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
+The application of multithreading can be observed in most of the programs we use daily, such as the phone's photo gallery. If you open it, small images appear; these are threads. Browsers use a separate thread for each tab to ensure that the entire browser does not stop if one page crashes. In large video games, these concepts are used to process graphics. What I learned in this assignment about waiting time and context switching is exactly like what happens on my mobile phone when I switch between different applications; the system schedules tasks to give me the impression that everything is working together.
 
 ---
 
@@ -55,4 +54,4 @@ I overcame these challenges by starting by reviewing the course material to gain
 
 ### Feedback on the assignment
 
-[Any comments about the assignment? Was it helpful? Too easy/hard? Suggestions for improvement?]
+The task is of medium difficulty, but the requirements of the assignment are very numerous.
