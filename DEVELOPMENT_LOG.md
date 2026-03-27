@@ -83,20 +83,21 @@ Challenges: Execution times overlapped with wait times in Run-Robin.
 
 Solution: I used System.currentTimeMillis() to record the moment a process exits the queue and the moment it rejoins it.
 
-Time taken: Hours
+Time taken: 3Hours
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**: 
+### Entry 5 March 24, 2026, 4:00 PM
 
-**Details**: 
+What I did: Created the final summary table
 
-**Challenges**: 
+Details: Programmed the `displayWaitingTimeSummary` method to display the results
 
-**Solution**: 
+Challenges: Formatted the columns in the table to be equal in length regardless of the number lengths
 
-**Time spent**: 
+Solution: Used `String.format` to adjust the spacing
+
+Time taken: 1 hour
 
 ---
 
