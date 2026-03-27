@@ -116,10 +116,10 @@ Time taken: 1 hour
 
 ## Summary
 
-**Total time spent on assignment**: [X hours]
+Total time spent: 7 hours
 
-**Most challenging part**: 
+Most challenging part: Accurately calculating the wait time, as processes in Round-Robin enter and exit the queue multiple times before finishing.
 
-**Most interesting learning**: 
+Key takeaways: How to use threads to simulate real-world operating system behavior, and how to manage process queues.
 
-**What I would do differently next time**: 
+What I'll do differently next time: I'll try implementing a Round-Robin development.
