@@ -17,7 +17,7 @@ I learned that multithreading is a powerful tool that allows a program to perfor
 
 **Your Answer:**
 
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
+The most challenging part for me was implementing the third feature related to accurately calculating the waiting time for each process. The difficulty lies in the fact that the Round-Robin algorithm makes the process enter and exit the Ready Queue multiple times, requiring a high level of concentration to determine the exact entry and exit times. I had to understand precisely when to start time calculation upon creation or when returning to the queue after the quantum process has finished, and when to stop linking the code concepts with the system's real-time using System.currentTimeMillis. This required significant thought to avoid errors. This challenge is directly related to the concept of context switching and how this switching affects the overall system performance.
 
 ---
 
