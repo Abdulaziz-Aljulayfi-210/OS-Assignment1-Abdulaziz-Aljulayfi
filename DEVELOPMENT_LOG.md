@@ -32,16 +32,17 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [Date and Time]
-**What I did**: 
+### Entry1 March 21, 2026, 4:00 PM
 
-**Details**: 
+What I did: Downloaded the repository
 
-**Challenges**: 
+Details: I forked the repository and changed the university ID to 445050210
 
-**Solution**: 
+Challenges: I encountered a problem linking GitHub and VS
 
-**Time spent**: 
+Solution: I downloaded Git to link them
+
+Time taken: 1 hour
 
 ---
 
