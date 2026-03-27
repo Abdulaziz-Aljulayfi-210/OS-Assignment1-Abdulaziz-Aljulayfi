@@ -25,7 +25,7 @@ The most challenging part for me was implementing the third feature related to a
 
 **Your Answer:**
 
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
+I overcame these challenges by starting by reviewing the course material to gain a deeper understanding of the scheduling algorithm. I also used artificial intelligence to solve some of the problems I encountered in the code. Breaking down the required features into smaller tasks was also very helpful. I began by adding the priority, then the switch counter, and finally the wait time. After ensuring the integrity of the previous parts, I also researched the Java documentation to understand how the Thread class works and how to manage queues using Queue and Map. Ultimately, trial and error, and manually comparing the program output with the expected results, played a significant role in arriving at the correct solution.
 
 ---
 
