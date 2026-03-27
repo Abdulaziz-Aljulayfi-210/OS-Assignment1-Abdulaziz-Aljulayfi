@@ -73,16 +73,17 @@ Time taken: 1 hour
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**: 
+### Entry 4 March 23, 2026, 11:00 PM
 
-**Details**: 
+What I did: Added the third feature (Waiting Time)
 
-**Challenges**: 
+Details: I added variables to track the creation time, the time a process enters the queue, and calculate the total time a process spends waiting its turn.
 
-**Solution**: 
+Challenges: Execution times overlapped with wait times in Run-Robin.
 
-**Time spent**: 
+Solution: I used System.currentTimeMillis() to record the moment a process exits the queue and the moment it rejoins it.
+
+Time taken: Hours
 
 ---
 
