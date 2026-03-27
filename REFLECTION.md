@@ -9,7 +9,7 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
+I learned that multithreading is a powerful tool that allows a program to perform multiple tasks concurrently, thus improving processor efficiency. I gained a practical understanding of the thread lifecycle, where a process starts in standby mode, then executes, and may return to the queue if it doesn't finish within the time quantum segment. I was impressed by the complexity of the thread coordination; each process in the simulation was an independent thread controlled by a scheduler. I also learned how the join() method helps ensure that a thread finishes executing before the processor moves to the next task, preventing interference.
 
 ---
 
