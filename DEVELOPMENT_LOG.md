@@ -46,16 +46,16 @@ Time taken: 1 hour
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**: 
+### Entry 2 March 22, 2026, 5:00 PM
 
-**Details**: 
+What I did: Added the Priority feature
+Details: I added a priority field to the Process class and modified the constructor to accept a random value between 1 and 5
 
-**Challenges**: 
+Challenges: How to ensure the priority is displayed correctly when a process enters the queue
 
-**Solution**: 
+Solution: I modified the `addProcessToQueue` method to include printing the priority value next to the process name
 
-**Time spent**: 
+Time taken: 1 hour 
 
 ---
 
