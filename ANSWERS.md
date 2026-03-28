@@ -25,11 +25,14 @@ In a Round-Robin system, if a process finishes its quantum run but isn't complet
 
 Example from my output:
 ```
-▶ P1 executing quantum [3000ms] 
-  ⏸ P1 completed quantum 3000ms │ Overall progress: [████████░░░░░░░░░░░░] 43%
+
+  ? P1 executing quantum [3000ms]
+  ? Quantum progress: [███████████████] 100%
+  ? P1 completed quantum 3000ms │ Overall progress: [████████░░░░░░░░░░░░] 43%
      Remaining time: 3835ms
-  ↻ P1 yields CPU for context switch
-  ➕ P1 (Priority: 1) added to ready queue │ Burst time: 6835ms
+  ? P1 yields CPU for context switch
+
+  ? P1 (Priority: 1) added to ready queue │ Burst time: 6835ms
 ```
 
 **Explanation of example:**
@@ -43,17 +46,17 @@ Example from my output:
 
 **Your Answer:**
 
-[Write your answer here. For each state, explain when P1 enters that state during the simulation. Use your understanding of the code to trace through the lifecycle.]
 
-1. **New**: [When is P1 in New state?]
 
-2. **Runnable**: [When does P1 become Runnable?]
+1. **New**: This is the first stage of P1 and it happens when the program creates a Thread Object in the code using the statement Thread thread = new Thread(process) but before the scheduler actually starts running it.
 
-3. **Running**: [When is P1 Running?]
+2. **Runnable**: P1 moves to this state as soon as the scheduler calls the thread.start() method. Here the process is ready and waiting its turn in the Ready Queue for the processor to pick it up.
 
-4. **Waiting**: [When/why would P1 be Waiting?]
+3. **Running**: Here, P1 is receiving the processor and executing its code. We know this when the message "P1 executing quantum" appears on the screen and the progress bar starts moving.
 
-5. **Terminated**: [When is P1 Terminated?]
+4. **Waiting**: P1 enters a waiting state when the program calls Thread.sleep() to simulate the execution time of the operation, or when the scheduler makes the main thread wait for its slice to finish using the join() method.
+
+5. **Terminated**:This is the last state, and it is reached by P1 when its Burst Time is completely finished and becomes zero, and the screen prints the message "P1 finished execution" and so its thread stops and ends completely.
 
 ---
 
