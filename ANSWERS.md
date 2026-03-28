@@ -11,7 +11,7 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 
 **Your Answer:**
 
-[Write your answer here. Consider: What is a process? What is a thread? How do they differ in terms of memory, resources, creation overhead? Why are threads more suitable for this simulation?]
+A process is a complete program with its own independent memory, separate from other programs. A thread, on the other hand, is a small part of a process that shares the same memory and resources with other threads. We used threads in this assignment because they are lighter on the system, faster to execute, and share data between them is much easier than creating separate processes. If you look at the code, all processes P1, P2, and others are within a single map and list, which is because they are threads within a single process.
 
 ---
 
