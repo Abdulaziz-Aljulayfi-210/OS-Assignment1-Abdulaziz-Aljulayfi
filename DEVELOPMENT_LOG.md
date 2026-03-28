@@ -32,68 +32,72 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Your Development Log:
 
-### Entry 1 - [Date and Time]
-**What I did**: 
+### Entry1 March 21, 2026, 4:00 PM
 
-**Details**: 
+What I did: Downloaded the repository
 
-**Challenges**: 
+Details: I forked the repository and changed the university ID to 445050210
 
-**Solution**: 
+Challenges: I encountered a problem linking GitHub and VS
 
-**Time spent**: 
+Solution: I downloaded Git to link them
 
----
-
-### Entry 2 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
+Time taken: 1 hour
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**: 
+### Entry 2 March 22, 2026, 5:00 PM
 
-**Details**: 
+What I did: Added the Priority feature
+Details: I added a priority field to the Process class and modified the constructor to accept a random value between 1 and 5
 
-**Challenges**: 
+Challenges: How to ensure the priority is displayed correctly when a process enters the queue
 
-**Solution**: 
+Solution: I modified the `addProcessToQueue` method to include printing the priority value next to the process name
 
-**Time spent**: 
-
----
-
-### Entry 4 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
+Time taken: 1 hour 
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**: 
+### Entry 3 March 22, 2026, 7:00 PM
 
-**Details**: 
+What I did: Added the second feature, Context Switch Counter.
 
-**Challenges**: 
+Details: Defined a static variable, contextSwitchCount, to count the number of times the processor switches between processes.
 
-**Solution**: 
+Challenges: Counting the first process as a context switch.
 
-**Time spent**: 
+Solution: Incremented the counter each time a while loop starts to pull a new process from the queue.
+
+Time taken: 1 hour
+
+---
+
+### Entry 4 March 23, 2026, 11:00 PM
+
+What I did: Added the third feature (Waiting Time)
+
+Details: I added variables to track the creation time, the time a process enters the queue, and calculate the total time a process spends waiting its turn.
+
+Challenges: Execution times overlapped with wait times in Run-Robin.
+
+Solution: I used System.currentTimeMillis() to record the moment a process exits the queue and the moment it rejoins it.
+
+Time taken: 3Hours
+
+---
+
+### Entry 5 March 24, 2026, 4:00 PM
+
+What I did: Created the final summary table
+
+Details: Programmed the `displayWaitingTimeSummary` method to display the results
+
+Challenges: Formatted the columns in the table to be equal in length regardless of the number lengths
+
+Solution: Used `String.format` to adjust the spacing
+
+Time taken: 1 hour
 
 ---
 
@@ -112,10 +116,10 @@ Document your development process as you work on the assignment. Add entries sho
 
 ## Summary
 
-**Total time spent on assignment**: [X hours]
+Total time spent: 7 hours
 
-**Most challenging part**: 
+Most challenging part: Accurately calculating the wait time, as processes in Round-Robin enter and exit the queue multiple times before finishing.
 
-**Most interesting learning**: 
+Key takeaways: How to use threads to simulate real-world operating system behavior, and how to manage process queues.
 
-**What I would do differently next time**: 
+What I'll do differently next time: I'll try implementing a Round-Robin development.
