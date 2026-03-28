@@ -21,11 +21,15 @@ A process is a complete program with its own independent memory, separate from o
 
 **Your Answer:**
 
-[Write your answer here. Describe the specific behavior - where does the process go? When does it run again? Give an example from your actual program output showing a process that was re-queued.]
+In a Round-Robin system, if a process finishes its quantum run but isn't completed, the scheduler removes it from the processor and returns it to the end of the queue to give subsequent processes a chance. We see this in the output when a message appears saying the process "yields CPU" and then it's added back to the queue "added to ready queue." This ensures that no single process takes too long and keeps other processes waiting indefinitely, thus achieving fairness for all
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+▶ P1 executing quantum [3000ms] 
+  ⏸ P1 completed quantum 3000ms │ Overall progress: [████████░░░░░░░░░░░░] 43%
+     Remaining time: 3835ms
+  ↻ P1 yields CPU for context switch
+  ➕ P1 (Priority: 1) added to ready queue │ Burst time: 6835ms
 ```
 
 **Explanation of example:**
