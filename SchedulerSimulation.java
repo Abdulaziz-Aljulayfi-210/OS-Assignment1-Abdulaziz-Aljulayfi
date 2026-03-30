@@ -337,23 +337,10 @@ public class SchedulerSimulation {
                           Colors.RESET + "\n");
         
 // FEATURE 2: Display total context switches at the end of simulation
-        System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + 
-                          "╔════════════════════════════════════════════════════════════════════════════════╗" + 
-                          Colors.RESET);
-        System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + "║" + Colors.RESET + 
-                          Colors.BG_BLUE + Colors.BRIGHT_WHITE + Colors.BOLD + 
-                          "                        SCHEDULER STATISTICS                                     " + 
-                          Colors.RESET + Colors.BOLD + Colors.BRIGHT_YELLOW + "║" + Colors.RESET);
-        System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + 
-                          "╠════════════════════════════════════════════════════════════════════════════════╣" + 
-                          Colors.RESET);
-        System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + "║" + Colors.RESET + 
-                          Colors.CYAN + "  🔄 Total Context Switches: " + Colors.RESET + 
-                          Colors.BRIGHT_CYAN + String.format("%-52s", contextSwitchCount) + 
-                          Colors.BOLD + Colors.BRIGHT_YELLOW + "║" + Colors.RESET);
-        System.out.println(Colors.BOLD + Colors.BRIGHT_YELLOW + 
-                          "╚════════════════════════════════════════════════════════════════════════════════╝" + 
-                          Colors.RESET + "\n");
+       System.out.println("=== SCHEDULER STATISTICS ===");
+        System.out.println("-------------------------------------------");
+        System.out.println("Total Context Switches: " + contextSwitchCount);
+        System.out.println("-------------------------------------------");
         
 // FEATURE 3: Display waiting time
         displayWaitingTimeSummary();
@@ -383,71 +370,22 @@ public class SchedulerSimulation {
 // FEATURE 3: Method to display waiting time summary table
     // Shows Process Name, Burst Time, Priority, and Waiting Time for each process
     public static void displayWaitingTimeSummary() {
-        // Print table header with decorative border
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + 
-                          "╔════════════════════════════════════════════════════════════════════════════════╗" + 
-                          Colors.RESET);
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET + 
-                          Colors.BG_BLUE + Colors.BRIGHT_WHITE + Colors.BOLD + 
-                          "                     PROCESS WAITING TIME SUMMARY                                " + 
-                          Colors.RESET + Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET);
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + 
-                          "╠════════════════════════════════════════════════════════════════════════════════╣" + 
-                          Colors.RESET);
-        
-        // Print column headers
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET + 
-                          "  " + Colors.BOLD + Colors.BRIGHT_WHITE + 
-                          String.format("%-12s", "Process") + 
-                          String.format("%-15s", "Burst Time") + 
-                          String.format("%-15s", "Priority") + 
-                          String.format("%-20s", "Waiting Time") + 
-                          Colors.RESET + "          " +
-                          Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET);
-        
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + 
-                          "╠════════════════════════════════════════════════════════════════════════════════╣" + 
-                          Colors.RESET);
-        
-        // Calculate total waiting time for average calculation
-        long totalWaitingTime = 0;
-        
-        // Print each process's information in the table
-        for (Process process : completedProcesses) {
-            String waitTimeStr = process.getTotalWaitingTime() + "ms";
-            
-            System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET + 
-                              "  " + Colors.BRIGHT_CYAN + 
-                              String.format("%-12s", process.getName()) + Colors.RESET +
-                              Colors.YELLOW + 
-                              String.format("%-15s", process.getBurstTime() + "ms") + Colors.RESET +
-                              Colors.MAGENTA + 
-                              String.format("%-15s", process.getPriority()) + Colors.RESET +
-                              Colors.BRIGHT_GREEN + 
-                              String.format("%-20s", waitTimeStr) + Colors.RESET +
-                              "          " +
-                              Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET);
-            
-            totalWaitingTime += process.getTotalWaitingTime();
-        }
-        
-        // Print separator before average
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + 
-                          "╠════════════════════════════════════════════════════════════════════════════════╣" + 
-                          Colors.RESET);
-        
-        // Calculate and display average waiting time
-        double avgWaitingTime = (double) totalWaitingTime / completedProcesses.size();
-        
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET + 
-                          "  " + Colors.BOLD + Colors.BRIGHT_YELLOW + 
-                          String.format("%-42s", "Average Waiting Time:") + 
-                          String.format("%-20s", String.format("%.2fms", avgWaitingTime)) + 
-                          Colors.RESET + "          " +
-                          Colors.BOLD + Colors.BRIGHT_CYAN + "║" + Colors.RESET);
-        
-        System.out.println(Colors.BOLD + Colors.BRIGHT_CYAN + 
-                          "╚════════════════════════════════════════════════════════════════════════════════╝" + 
-                          Colors.RESET + "\n");
+    System.out.println("\n--- Final Results and Waiting Time Summary ---");
+    System.out.println("Process Name | Burst Time | Priority | Waiting Time");
+    System.out.println("---------------------------------------------------------");
+
+    long totalWait = 0;
+    for (Process p : completedProcesses) {
+        System.out.println(p.getName() + "\t     | " + 
+                           p.getBurstTime() + "ms\t  | " + 
+                           p.getPriority() + "\t     | " + 
+                           p.getTotalWaitingTime() + "ms");
+        totalWait += p.getTotalWaitingTime();
     }
+
+    double average = (double) totalWait / completedProcesses.size();
+    System.out.println("---------------------------------------------------------");
+    System.out.printf("Average Waiting Time for all processes: %.2fms\n", average);
+    System.out.println("---------------------------------------------------------\n");
+}
 }
